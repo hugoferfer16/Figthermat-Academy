@@ -1,50 +1,83 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia Jiujitsu Miranda - [Nombre de tu Profe]</title>
+    <title>Fightermat Academy | Miranda de Ebro</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        /* Tipografía similar a Fightzone */
         body { font-family: 'Inter', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1555597673-b21d5c935865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
     </style>
 </head>
-<body class="bg-black text-white">
+<body class="bg-zinc-950 text-white">
 
-    <nav class="bg-zinc-900 p-4 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-tight">MIRANDA <span class="text-red-600">BJJ</span></h1>
-            <div class="space-x-6 text-sm">
-                <a href="#horarios" class="hover:text-red-500">Horarios</a>
-                <a href="#contacto" class="hover:text-red-500">Contacto</a>
-                <a href="#" class="bg-red-600 px-4 py-2 rounded font-bold hover:bg-red-700 transition">Probar Clase</a>
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="text-2xl font-black tracking-tighter">
+                FIGHTER<span class="text-red-600">MAT</span>
             </div>
+            <div class="hidden md:flex space-x-8 font-bold text-sm uppercase tracking-widest">
+                <a href="#inicio" class="hover:text-red-600 transition">Inicio</a>
+                <a href="#academia" class="hover:text-red-600 transition">La Academia</a>
+                <a href="#clases" class="hover:text-red-600 transition">Clases</a>
+                <a href="#horarios" class="hover:text-red-600 transition">Horarios</a>
+            </div>
+            <a href="https://www.instagram.com/TU_USUARIO" class="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-full font-black text-sm transition uppercase">
+                ¡Prueba Gratis!
+            </a>
         </div>
     </nav>
 
-    <header class="bg-zinc-800 h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('img/hero-bjj.jpg');">
-        <div class="p-6">
-            <h2 class="text-6xl font-extrabold tracking-tighter mb-4">COMIENZA TU CAMINO.</h2>
-            <p class="text-xl text-zinc-300 max-w-2xl mx-auto mb-8">Únete al equipo más grande de Miranda de Ebro. Jiu-Jitsu Brasileño para todos los niveles.</p>
-            <a href="#" class="bg-red-600 text-lg px-8 py-3 rounded-full font-bold hover:bg-red-700 transition">Ver Horarios</a>
-        </div>
-    </header>
-
-    <section id="horarios" class="py-20 bg-zinc-900">
-        <div class="container mx-auto px-4">
-            <h3 class="text-4xl font-bold text-center mb-12">HORARIOS DE ESTRENO</h3>
-            <div class="bg-black p-6 rounded-xl border border-zinc-700 text-center">
-                <p class="text-zinc-400">Próximamente los horarios detallados del nuevo local.</p>
+    <section id="inicio" class="hero-gradient h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-4xl">
+            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
+                JUI-JITSU PARA <br><span class="text-red-600">TODO EL MUNDO</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-zinc-300 mb-10 font-medium">
+                Nueva academia en Miranda de Ebro. Entrena con los mejores.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="#horarios" class="bg-white text-black px-10 py-4 rounded-full font-black uppercase hover:bg-zinc-200 transition">Ver Horarios</a>
+                <a href="#contacto" class="border-2 border-white px-10 py-4 rounded-full font-black uppercase hover:bg-white hover:text-black transition">Dónde estamos</a>
             </div>
         </div>
     </section>
 
-    <footer id="contacto" class="py-10 bg-black border-t border-zinc-800">
-        <div class="container mx-auto text-center px-4">
-            <p class="text-zinc-500 mb-4">Academia [Nombre], Calle Falsa 123, Miranda de Ebro.</p>
-            <a href="https://instagram.com/tu_academia" target="_blank" class="text-red-500 hover:text-red-400 font-bold">Sígenos en Instagram</a>
+    <section id="clases" class="py-24 px-6 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-black mb-16 text-center uppercase tracking-tighter italic">Nuestras Disciplinas</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="group relative overflow-hidden rounded-2xl bg-zinc-900 aspect-[4/5]">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                <div class="absolute bottom-8 left-8 z-20">
+                    <h3 class="text-3xl font-black uppercase italic">BJJ Gi</h3>
+                    <p class="text-zinc-400">Jiu-Jitsu Brasileño con kimono.</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-2xl bg-zinc-900 aspect-[4/5]">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                <div class="absolute bottom-8 left-8 z-20">
+                    <h3 class="text-3xl font-black uppercase italic">No-Gi</h3>
+                    <p class="text-zinc-400">Grappling y sumisión sin kimono.</p>
+                </div>
+            </div>
+            <div class="group relative overflow-hidden rounded-2xl bg-zinc-900 aspect-[4/5]">
+                <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent z-10"></div>
+                <div class="absolute bottom-8 left-8 z-20">
+                    <h3 class="text-3xl font-black uppercase italic">Kids</h3>
+                    <p class="text-zinc-400">Clases para los más pequeños.</p>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <footer class="bg-zinc-900 py-12 border-t border-white/5 text-center">
+        <p class="text-zinc-500 text-sm tracking-widest uppercase">© 2024 Fightermat Academy Miranda de Ebro</p>
     </footer>
 
 </body>
