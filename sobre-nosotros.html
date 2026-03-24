@@ -15,9 +15,18 @@
         
         /* Estilos personalizados para el carrusel */
         .swiper { width: 100%; height: 500px; }
-        .swiper-slide img { width: 100%; height: 100%; object-cover: cover; }
+        .swiper-slide img { width: 100%; height: 100%; object-fit: cover; }
         .swiper-button-next, .swiper-button-prev { color: white !important; }
         .swiper-pagination-bullet { background: white !important; }
+
+        /* Efecto de transición para el mapa */
+        .map-wrapper iframe { 
+            filter: grayscale(100%) invert(90%) contrast(90%); 
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .map-wrapper:hover iframe { 
+            filter: grayscale(0%) invert(0%) contrast(100%); 
+        }
     </style>
 </head>
 <body class="bg-black text-white">
@@ -28,15 +37,18 @@
             <div class="hidden md:flex space-x-8 font-bold text-xs uppercase tracking-[0.2em]">
                 <a href="index.html" class="hover:text-zinc-400 transition">Inicio</a>
                 <a href="sobre-nosotros.html" class="text-zinc-400">Sobre Nosotros</a>
-                <a href="#" class="hover:text-zinc-400 transition">Clases</a>
-                <a href="#" class="hover:text-zinc-400 transition">Cuotas</a>
+                <a href="disciplinas.html" class="hover:text-zinc-400 transition">Disciplinas</a>
+                <a href="horarios.html" class="hover:text-zinc-400 transition">Horarios</a>
+                <a href="cuotas.html" class="hover:text-zinc-400 transition">Membresias</a>
             </div>
-            <a href="#" class="bg-white text-black px-6 py-2 font-black text-xs uppercase tracking-widest hover:bg-zinc-300 transition">Contacto</a>
+            <a href="contacto.html" class="bg-white text-black px-6 py-2 rounded-none font-black text-xs transition uppercase tracking-widest hover:bg-zinc-300">
+                Contacto
+            </a>
         </div>
     </nav>
 
     <section class="relative h-[70vh] flex items-end pb-20 px-6 overflow-hidden">
-        <img src="img/foto-equipo.jpeg" 
+        <img src="img/foto-equipo3.jpeg" 
              class="absolute inset-0 w-full h-full object-cover z-0 bw-filter" alt="Fightermat Local">
         <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent z-10"></div>
         
@@ -70,10 +82,10 @@
                     <img src="img/instalaciones3.jpeg" alt="Vestuarios">
                 </div>
                 <div class="swiper-slide bw-filter">
-                    <img src="img/instalaciones4.jpeg" alt="Vestuarios">
+                    <img src="img/instalaciones4.jpeg" alt="Duchas">
                 </div>
                 <div class="swiper-slide bw-filter">
-                    <img src="img/instalaciones5.jpeg" alt="Vestuarios">
+                    <img src="img/instalaciones5.jpeg" alt="Entrada">
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -82,14 +94,90 @@
         </div>
     </section>
 
-    <footer class="bg-black py-12 border-t border-white/5 text-center">
-        <p class="text-zinc-600 text-[10px] tracking-[0.4em] uppercase">FIGHTERMAT ACADEMY • ESTRENO 2026</p>
+    <section class="py-24 bg-zinc-950 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-6">¿DÓNDE ESTAMOS?</h2>
+                    <p class="text-zinc-400 uppercase tracking-widest text-sm mb-8 leading-relaxed">
+                        Nos encontramos en el centro de Miranda de Ebro. <br>
+                        <span class="text-white font-bold italic">C. Arenal, 105, 09200 Miranda de Ebro, Burgos.</span>
+                    </p>
+                </div>
+                
+                <div class="map-wrapper h-[400px] bg-black border border-white/10 overflow-hidden relative group cursor-pointer">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2938.835940476485!2d-2.9497544!3d42.6648719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4fa19266735e95%3A0xc3f60f6ed498a44d!2sC.%20Arenal%2C%20105%2C%2009200%20Miranda%20de%20Ebro%2C%20Burgos!5e0!3m2!1ses!2ses!4v1710000000000!5m2!1ses!2ses" 
+                        class="w-full h-full border-0" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                    <div class="absolute inset-0 bg-black/40 group-hover:opacity-0 transition-opacity duration-500 flex items-center justify-center pointer-events-none">
+                        <p class="text-[10px] uppercase tracking-[0.5em] text-zinc-300 font-bold italic">Ver ubicación a color</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black border-t border-white/10">
+        
+        <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col items-center text-center">
+            <div class="text-3xl font-black italic tracking-tighter mb-8 uppercase">
+                FIGHTERMAT <span class="text-zinc-600 font-light">ACADEMY</span>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-10">
+                <a href="https://www.instagram.com/checkmat_fightersmat_academy/" target="_blank" class="group flex items-center gap-3">
+                    <span class="text-xs font-black uppercase tracking-[0.3em] group-hover:text-zinc-400 transition">Instagram</span>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                </a>
+                <a href="https://wa.me/TU_NUM" target="_blank" class="group flex items-center gap-3">
+                    <span class="text-xs font-black uppercase tracking-[0.3em] group-hover:text-zinc-400 transition">WhatsApp</span>
+                    <div class="w-2 h-2 bg-white rounded-full"></div>
+                </a>
+                <a href="mailto:info@fightermat.com" class="group flex items-center gap-3">
+                    <span class="text-xs font-black uppercase tracking-[0.3em] group-hover:text-zinc-400 transition">Email</span>
+                </a>
+            </div>
+            
+            <p class="mt-12 text-zinc-600 text-[10px] uppercase tracking-[0.5em]">Miranda de Ebro • Estreno 2026</p>
+        </div>
+
+        <div class="bg-zinc-950 py-6 border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] uppercase tracking-[0.2em] text-zinc-700">
+                
+                <div class="font-medium">
+                    © 2026 Todos los derechos reservados.
+                </div>
+
+                <div class="relative group md:text-right italic cursor-help">
+                    Concept, Design & Engineering by 
+                    <span class="text-zinc-500 font-bold not-italic ml-1 group-hover:text-white transition-colors duration-300">
+                    Hugo Fernández Fernández
+                    </span>
+
+                    <div class="absolute bottom-full right-0 mb-4 w-64 bg-zinc-900 border border-white/20 p-6 rounded-sm shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 text-left z-[100]">
+                        <p class="text-[10px] font-black uppercase tracking-widest text-white mb-2 italic underline decoration-zinc-700">Software Developer</p>
+                        <p class="text-[9px] text-zinc-400 leading-relaxed lowercase tracking-wider mb-4">
+                            Estudiante de Ingeniería especializado en desarrollo web de alto rendimiento y arquitectura de sistemas.
+                        </p>
+                        <div class="flex flex-col gap-2">
+                            <a href="hugoferfer18@gmail.com" class="text-[9px] font-black uppercase text-white hover:underline italic">→ Contactar por Email</a>
+                            <a href="www.linkedin.com/in/hugo-fernandez-fernandez" target="_blank" class="text-[9px] font-black uppercase text-white hover:underline italic">→ Ver LinkedIn / Portfolio</a>
+                        </div>
+                        <div class="absolute top-full right-6 w-0 h-0 border-l-[6px] border-l-transparent border-r-[6px] border-r-transparent border-t-[6px] border-t-zinc-900"></div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1.2, // Se ve un poco de la siguiente foto (estético)
+            slidesPerView: 1.2,
             centeredSlides: true,
             spaceBetween: 30,
             loop: true,
@@ -97,7 +185,7 @@
             pagination: { el: ".swiper-pagination", clickable: true },
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
             breakpoints: {
-                768: { slidesPerView: 2.5 } // En PC se ven más fotos a la vez
+                768: { slidesPerView: 2.5 }
             }
         });
     </script>
